@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ITEL 202 — Platform Technologies Reviewer</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1c2033;--mu:#5b6280;--ac:#4f46e5;--bd:#dfe2ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141f;--card:#1b1e2e;--tx:#e8eaf6;--mu:#9aa1c3;--ac:#8b85ff;--bd:#2c3050}}
+:root[data-theme="dark"]{--bg:#12141f;--card:#1b1e2e;--tx:#e8eaf6;--mu:#9aa1c3;--ac:#8b85ff;--bd:#2c3050}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:22px 16px 8px;max-width:860px;margin:auto}
+h1{margin:0;font-size:1.5rem}header p{margin:4px 0 0;color:var(--mu);font-size:.9rem}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;max-width:860px;margin:auto}
+nav button{flex:none;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 12px;border-radius:999px;font:inherit;font-size:.85rem;cursor:pointer}
+nav button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+main{max-width:860px;margin:auto;padding:8px 16px 40px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:12px 0}
+.card h3{margin:0 0 8px;font-size:1.05rem;color:var(--ac)}
+.card ul{margin:6px 0 0;padding-left:20px}.card li{margin:4px 0}
+.card p{margin:6px 0}
+.lo{border-left:4px solid var(--ac)}
+.fc{cursor:pointer;min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:1.1rem}
+.row{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+.btn{border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:8px 14px;border-radius:10px;font:inherit;cursor:pointer}
+.btn.p{background:var(--ac);color:#fff;border-color:var(--ac)}
+.opt{display:block;width:100%;text-align:left;margin:6px 0}
+.opt.ok{background:#16a34a;color:#fff;border-color:#16a34a}.opt.no{background:#dc2626;color:#fff;border-color:#dc2626}
+small{color:var(--mu)}
+.bar{height:6px;background:var(--bd);border-radius:9px;margin:8px 0;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac);transition:width .3s}
+.scene{position:relative;perspective:1000px;margin:12px 0}.fcard{position:relative;height:260px;transform-style:preserve-3d;transition:transform .5s;cursor:pointer}.fcard.flip{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);border:1px solid var(--bd);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:1.15rem;overflow:auto}.back{transform:rotateY(180deg)}
+.star{position:absolute;top:8px;right:12px;z-index:2;border:0;background:none;font-size:1.5rem;color:var(--bd);cursor:pointer}.star.on{color:#f5b301}
+.opt.sel{border-color:var(--ac);box-shadow:0 0 0 2px var(--ac)}.card p{white-space:pre-line}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.tile{min-height:90px;font-size:.8rem;padding:8px}.tile.sel{border-color:var(--ac);box-shadow:0 0 0 2px var(--ac)}.tile.no{background:#dc2626;color:#fff}.tile.gone{visibility:hidden}
+</style></head><body>
+<header><h1>ITEL 202 — Platform Technologies Reviewer</h1><p>Weeks 7–9 · Study notes, flashcards &amp; quiz</p></header>
+<nav id="nav"></nav><main id="m"></main>
+<script>
+const T=[
+{n:"Intro to Platforms",s:[
+["What is a Technology Platform?",["A technology platform is a foundation or environment that provides the tools, software, hardware, and services needed to build and run multiple applications.","Technology platforms can be defined as a strategic approach that focused on how to systematically leverage technologies across different applications."]],
+["Roles of the Platform",["Platform technology solutions can be built via a service-oriented architecture by connecting up services from different providers, as technology developers increasingly build products on top of other people’s platforms.","Complexity – from standalone technology to technology based on a service-oriented architecture.","User-generated systems - creating APIs and platforms on which end-users can alter, adapt and innovate while being supported by the core technology for interoperability with others."]],
+["Platform Technologies Defined",["During the past few decades, with the rise of the Internet platforms, such as the App Store or eBay, have proven to be some of the most dynamic, innovative, and fastest growing services.","It is a group of technologies that are used as a base or infrastructure upon which other applications, technologies or processes are developed for the end-user. Ex. Personal Computer: Basic Hardware (Computer) + Software (Operating System).","Computers use specific central processing units (CPUs) that are designed to run specific machine language code. In order for the computer to run software applications, the applications must be in that CPU’s binary-coded machine language.","Platform technologies are systems build upon a platform architecture that distributes the system out into different levels of abstraction."]],
+["Non-Platform Technologies",["An example of a non-platform technology is a hammer, for it is a homogeneous system."]],
+["Power of Interoperability",["Platforms are simply designed as individual physical objects that perform a function, platforms are designed to be interoperable with other systems, they will likely have external applications running on top of them all of which cannot be fully foreseen by the developers of the platform.","Ex. Smartphone with internet connection, facebook (can be accessed through the internet)."]],
+["Capacity of Bundling",["Effective platform technologies should work interdependently, where the platform provides the elementary building blocks that are then bundled together on the application level to meet the specific requirements of the end-user.","Ex. create a new service by building a web application that draws upon services from Twitter, for user identity, Ethereum for secure transactions, Alibaba for sourcing materials, Upwork for staffing, etc."]],
+["Types of Platform Technologies",["OS - provide the basic services required to use hardware.","Computing Platforms - Platforms built on top of operating systems that provide computing functionality.","Database Platforms - Cloud platforms for deploying and managing various types of database such as relational, NoSQL and in-memory databases.","Storage Platforms - Platforms for scalable storage of objects and files including APIs and value added services such as resilient storage that is backed up in multiple locations.","Application Platforms - environments and toolkits for developing and deploying applications.","Mobile Platforms - include mobile operating systems.","Web Platforms - such as web servers, web application servers, content delivery networks and edge computing.","Content Management Systems (CMS) - Platforms for publishing and managing content, media and documents.","Media Platforms – use for media publishing and analysis with tools such as video streaming.","Analytics Platforms – services such as capturing, processing of data.","Security Platforms – such as firewalls, identity and access management.","Robotics Platforms – includes OS for robots with a framework.","IoT – OS for device management.","AI Platforms – machine learning API and voice synthesis.","Gaming Platforms – 3D game engines, AR and VR."]],
+["Examples of Application Platforms",["Microsoft .NET – Used to build Windows, web, mobile, and cloud applications using C# and other languages.","Java Platform – Enables applications to run on different operating systems using the Java Virtual Machine (JVM).","Node.js – Allows developers to build scalable server-side applications using JavaScript.","Django – A high-level Python framework for developing secure and maintainable web applications.","Laravel – A PHP framework that simplifies web application development with built-in authentication, routing, and database management."]]]},
+{n:"Abstraction",s:[
+["Learning Objectives",["Define abstraction and explain its general meaning across different disciplines.","Familiarize practical examples of abstraction in computing (e.g., operating systems, programming languages, virtual machines/cloud platforms).","Analyze the different levels of abstraction in platform technologies (hardware, OS, applications, user interface).","Evaluate the importance of abstraction in platform technologies in simplifying complexity, reducing redundancy, and enabling flexible, adaptive systems.","Apply the concept of abstraction by identifying real-world scenarios where abstraction is used to simplify processes or systems."],1],
+["Abstraction Defined",["Abstraction is the quality of dealing with generic forms rather than specific events, details or applications.","It means removing the application of the technology from the underlying processes and functions that support that application."]],
+["Abstraction in Platform Technologies",["Abstraction allows software developers, system administrators, or end-users to work with hardware and software without worrying about the low-level details (like how transistors switch, or how memory is managed byte by byte)."]],
+["Abstraction in Different Fields",["Engineering and Construction","Automobile Industry","Finance","Information Technology"]],
+["Practical Examples of Abstraction",["OS Abstraction","Programming Languages","Virtual Machines/Cloud Platforms"]],
+["Levels of Abstraction",["Foundation Layer (Hardware)","Platform Layer (OS)","Application Layer (apps in the App Store)","User Interface"]],
+["Importance of Platform Technologies",["Programmers can abstract away the complexity that users or producers of the service have to deal with.","They can avoid redundancies by having the platform provide the common services required by all components.","Platforms are the ideal architecture for creating user-generated systems.","Platform architecture is ideal for building flexible, adaptive, and evolutionary systems."]]]},
+{n:"Platform Architecture",s:[
+["What is a Platform Architecture?",["A platform provides a foundation of capabilities that other applications, developers, or services can use.","Platform architecture organizes components, services, interfaces, data, and infrastructure.","Key design idea: expose useful capabilities while hiding unnecessary implementation details."]],
+["What is Abstraction?",["Abstraction = focus on WHAT a component does, not HOW it does it.","Example: saveUser() can hide database storage, indexing, locking, and disk operations.","Good abstraction provides a useful interface and hides unnecessary complexity.","Implementation can change internally as long as the external contract remains compatible."]],
+["Reusable Components",["A reusable component is designed to be used more than once.","Examples: authentication, storage, logging, notifications, database drivers, analytics, cloud functions.","A good building block has a clear purpose, inputs, outputs, interface, documentation, and manageable dependencies.","Goal: build a capability once and use it repeatedly.","Benefits — Faster development: start from existing capabilities.","Less duplication: avoid rewriting the same functionality.","Consistency: shared implementations encourage consistent behavior.","Maintainability: improvements can be applied to shared components.","Scalability and reliability: managed cloud services can encapsulate infrastructure concerns."]],
+["Reusable Components — Examples",["Authentication services - Handles user login, identity verification, session management, and access control. ex. Firebase authentication","Payment APIs - Processes financial transactions securely — card payments, digital wallets, subscriptions. ex. Gcash PayMongo API","Logging modules - Records application events, errors, and activity for debugging, auditing, and monitoring. Ex. Python’s Built in logging module.","Database access libraries - Provide a standard, reusable way for applications to connect to and query databases, abstracting away raw SQL or low-level driver code.","Cloud storage services - Offer scalable, reusable file/object storage so applications don't need to manage their own physical storage infrastructure. ex. Google Cloud Storage","Notification services - Sends push notifications, SMS, or emails to users.","Serverless functions - Runs small, independent pieces of backend code on demand, without the developer provisioning or managing a server — directly tying back to the modularity/reusability concept discussed earlier.","UI components - Provides pre-built, reusable pieces of user interface (buttons, forms, modals, navigation bars) so developers don't redesign and re-code the same visual elements for every project.","Monitoring services - Continuously tracks system health, performance metrics, and uptime — alerting teams before small issues become outages."]],
+["Modularity",["Modularity divides a platform into components with clear responsibilities.","High cohesion: each module focuses on related responsibilities.","Low coupling: modules depend on each other as little as practical.","Clear interfaces: modules communicate through defined contracts.","Composability: modules can be combined to create larger solutions."]],
+["Reusability Patterns",["Libraries: reusable code that an application calls to perform a specific function. Examples: a Python library for numerical computation; a JavaScript library for interface components; a database driver for communicating with a database.","SDK = Software Development Kit. Provides tools, client libraries, authentication helpers, models, API wrappers, documentation, and examples. SDKs make platform services easier to consume from a programming language. Example: a cloud SDK can turn API operations into familiar programming-language calls.","Plug-ins / Extensions: a plug-in extends an existing host platform without modifying its core. Typical structure: Host → Extension Point → Interface/Contract → Plug-in. Examples: browser extensions, IDE extensions, CMS plug-ins."]],
+["What is Interoperability?",["Interoperability = different systems or components can communicate and work together.","Common enablers: APIs, HTTP, JSON, events, messaging, authentication, schemas, and standards.","Reusable components become more valuable when their interfaces are predictable.","Interoperability connects independent building blocks into a larger platform."]],
+["AWS Lambda",["AWS Lambda runs code without requiring developers to manage servers.","Lambda functions are basic building blocks for serverless applications.","Functions can be triggered by events and integrated with other AWS services.","Ex. Chatbots - Many Alexa Skills and chatbot backends run entirely on Lambda, processing each user request as an independent, on-demand function call."]],
+["Firebase",["Firebase provides integrated services and SDKs for application development.","Examples: Authentication, Cloud Firestore, Cloud Storage, Hosting, Analytics, and Cloud Functions.","Firebase SDKs expose platform capabilities to application developers.","Firebase Extensions provide pre-packaged functionality that can be installed and configured."]],
+["Abstraction in Cloud Platforms",["AWS Lambda abstracts much of server provisioning and capacity management.","Firebase abstracts many backend concerns through managed services and SDKs.","Abstraction lets developers focus on application behavior.","Important: abstraction does NOT eliminate design decisions about security, cost, latency, data, or reliability."]],
+["Composition: Student Services Platforms",["Authentication → shared identity service","Database → student and transaction data","Storage → uploaded documents","Serverless function → request processing/business rules","Notification service → email/push messages","Analytics → usage and performance insights"]],
+["How to Design Reusable Components",["Define one clear capability.","Specify inputs, outputs, errors, and interface contracts.","Minimize unnecessary dependencies.","Document configuration and usage.","Use versioning and backward-compatibility practices.","Apply security, testing, monitoring, and access control."]],
+["Common Problems",["Tight coupling — changes propagate across many components.","Dependency conflicts — incompatible versions can break applications.","Vendor lock-in — deep dependence on one platform can reduce portability.","Hidden complexity — abstractions can conceal important constraints.","Security risks — shared services require carefully designed permissions."]],
+["Summary",["Abstraction hides implementation details behind useful interfaces.","Reusable components reduce duplication and support faster development.","Modularity promotes separation of responsibilities and controlled dependencies.","Libraries, SDKs, plug-ins, APIs, and cloud services are common reuse mechanisms.","Interoperability allows components to work together through contracts, protocols, data formats, and events."]]]},
+{n:"Interop, Bundling & SOA",s:[
+["Interoperability — Objectives",["Explain the concept and importance of interoperability.","Analyze how different systems and services exchange information.","Demonstrate basic interoperability between two systems or services using an appropriate mechanism such as an API or file exchange."],1],
+["What Is Interoperability?",["The ability of different systems, applications, or platforms — often built by different vendors using different technologies — to exchange information and correctly use that information, without custom, one-off workarounds for every connection. (Hodapp & Hanelt, 2022)","Lets separate systems “talk to each other and actually understand each other,” not just send raw data.","Is the foundation that makes reusable components and modularity actually work in practice.","Avoids tightly-coupled, hard-to-maintain, custom-built connectors between every pair of systems."]],
+["Four Types of Interoperability",["Technical: systems can physically connect and exchange data using shared network protocols, APIs, or file formats.","Syntactic: exchanged data follows a shared structure or format — both systems use JSON or XML in the same agreed shape.","Semantic: both systems interpret the meaning of exchanged data identically (e.g., “DOB” = “Date of Birth”).","Organizational: different organizations align business processes and governance so their systems can work together."]],
+["Enabling Standards & Protocols",["REST: the most common modern API style, built on HTTP methods (GET, POST, PUT, DELETE).","SOAP: a stricter, XML-based messaging protocol common in enterprise/legacy systems.","JSON / XML: standardized data-exchange formats letting unrelated systems read each other's data correctly."]],
+["Challenges & Real-World Examples",["Vendor lock-in — proprietary formats/APIs make switching providers difficult.","Legacy systems — older systems built before modern standards need adapters or middleware.","“Sign in with Google”: a third-party app and Google's identity system interoperate through OAuth.","Email (SMTP/IMAP): a Gmail user can message an Outlook user because both follow shared protocols.","Healthcare (HL7/FHIR): hospitals with different EHR systems share patient data via shared standards."]],
+["Bundling and Modularity — Objectives",["Explain the concepts of bundling and modularity.","Analyze how modular components contribute to reusable and flexible platform solutions.","Evaluate a bundled-service design based on reusability, flexibility, and user requirements."],1],
+["What Is Bundling?",["Bundling is the platform strategy of packaging multiple products, services, or features together and offering them as a single combined solution — rather than requiring users to acquire each piece separately.","Increases perceived value — users get more for a single price or setup effort.","Encourages platform lock-in — once bundled, users often stay within the ecosystem.","Simplifies the user's decision — one bundle instead of many separate choices."]],
+["Bundling vs. Unbundling: Trade-offs",["Bundling: higher perceived value for users; simplified purchasing/onboarding; cross-promotes underused features; strengthens platform ecosystem lock-in.","Unbundling: users pay only for what they need; greater flexibility & customization; easier for competitors to target one feature; simplifies pricing transparency."]],
+["Bundling Examples",["Microsoft Office Suite: Word, Excel, PowerPoint, and Outlook are each independent, modular applications — but Microsoft bundles them into one Office subscription, increasing perceived value and encouraging users to stay within the Microsoft ecosystem.","Smart City / Smart Home: a smart home bundles lighting, cameras, and thermostats into one connected system — each device is separate and modular, but the platform (Google Home, Alexa) bundles them under one control interface. Each module keeps working even if another is swapped out."]],
+["SOA — Objectives",["Explain the core principles of Service-Oriented Architecture (SOA).","Describe loose coupling, reusability, and discoverability, and why each matters.","Compare web services and APIs (REST, SOAP, message queues) as integration mechanisms.","Differentiate SOA from microservices architecture."],1],
+["Introduction to SOA",["Service-Oriented Architecture (SOA) structures an application as a collection of independent, reusable services — each performing a specific business function — that communicate with each other over a network. (Velepucha & Flores, 2023)","Service: a self-contained unit of business functionality (e.g., 'process payment').","Message: services communicate by exchanging structured messages (e.g., XML, JSON).","Registry: services can be discovered and located by other parts of the system."]],
+["SOA Principles",["SOA is guided by a small set of design principles that let independent services work together reliably, at scale, and over time.","Loose Coupling: services depend on each other's interface, not internal implementation.","Reusability: a service built once can be used by many different applications.","Discoverability: services can be found and consumed dynamically through a registry."]],
+["Deep Dive: Loose Coupling",["Loose coupling means services interact through standard interfaces without needing to know each other's internal implementation. Changing one service doesn't break the others, as long as its published interface stays the same."]],
+["Deep Dive: Reusability & Discoverability",["Reusability: a service built once — like authentication or payment processing — can be reused across many applications, avoiding duplicated logic and inconsistent behavior. Example: a single “Verify Customer” service can be reused by the mobile app, the web portal, and the call-center system alike.","Discoverability: services are published to a registry with a description of what they do, so other systems can search for and locate them dynamically — without hardcoding a connection in advance. Example: a new reporting tool can query the registry to find an existing “Get Sales Data” service instead of building its own."]],
+["SOA vs. Microservices Architecture",["Service size — SOA: larger, often shares infrastructure | Microservices: small, single-purpose services.","Communication — SOA: often uses an Enterprise Service Bus (ESB) | Microservices: typically lightweight REST/HTTP APIs.","Data — SOA: services may share a common database | Microservices: each service usually owns its own database.","Deployment — SOA: often deployed together as larger units | Microservices: deployed and scaled independently."]],
+["Key Takeaways",["Interoperability lets different systems exchange and correctly interpret information — the foundation for everything that follows.","Bundling packages modular components into one offering, boosting value and lock-in, but trading off some flexibility.","Good bundles stay modular internally: high cohesion, low coupling, clear interfaces, and composability still apply.","SOA connects bundled or standalone services through standardized interfaces (REST, SOAP, message queues).","Loose coupling, reusability, and discoverability let services be integrated, replaced, or reused without breaking the system."]]]}
+];
+const F=[
+["Define abstraction.","Abstraction is the quality of dealing with generic forms rather than specific events, details or applications."],
+["What does abstraction mean in platform technologies?","Working with hardware and software without worrying about low-level details (like how transistors switch, or how memory is managed byte by byte)."],
+["Levels of abstraction in platform technologies?","Foundation Layer (Hardware) → Platform Layer (OS) → Application Layer (apps in the App Store) → User Interface."],
+["What is a technology platform?","A foundation or environment that provides the tools, software, hardware, and services needed to build and run multiple applications."],
+["Example of a non-platform technology?","A hammer, for it is a homogeneous system."],
+["Abstraction: WHAT vs HOW?","Focus on WHAT a component does, not HOW it does it (e.g., saveUser())."],
+["Four types of interoperability?","Technical, Syntactic, Semantic, Organizational."],
+["Semantic interoperability means…","Both systems interpret the meaning of exchanged data identically (e.g., “DOB” = “Date of Birth”)."],
+["What is bundling?","Packaging multiple products, services, or features together and offering them as a single combined solution."],
+["Three SOA principles?","Loose Coupling, Reusability, Discoverability."],
+["Three SOA parts?","Service, Message, Registry."],
+["SOA vs microservices — data?","SOA: services may share a common database. Microservices: each service usually owns its own database."],
+["Good modularity aims for…","High cohesion, low coupling, clear interfaces, composability."],
+["Common problems of reusable components?","Tight coupling, dependency conflicts, vendor lock-in, hidden complexity, security risks."],
+["Why are platforms the ideal architecture (importance)?","Programmers abstract away complexity, avoid redundancies by having the platform provide common services, and platforms suit user-generated systems and flexible, adaptive, evolutionary systems."],
+["Name some types of platform technologies.","OS, Computing, Database, Storage, Application, Mobile, Web, CMS, Media, Analytics, Security, Robotics, IoT, AI, Gaming."],
+["Examples of application platforms?","Microsoft .NET, Java Platform, Node.js, Django, Laravel."],
+["What is a reusable component?","A component designed to be used more than once (e.g., authentication, storage, logging, notifications, database drivers, analytics, cloud functions)."],
+["Benefits of reusable components?","Faster development, less duplication, consistency, maintainability, scalability and reliability."],
+["What does an SDK provide?","Tools, client libraries, authentication helpers, models, API wrappers, documentation, and examples."],
+["Plug-in structure?","Host → Extension Point → Interface/Contract → Plug-in."],
+["What is a library?","Reusable code that an application calls to perform a specific function."],
+["What is AWS Lambda?","A service that runs code without requiring developers to manage servers; functions are triggered by events and integrate with other AWS services."],
+["Firebase services examples?","Authentication, Cloud Firestore, Cloud Storage, Hosting, Analytics, and Cloud Functions."],
+["Steps to design reusable components?","Define one clear capability; specify inputs, outputs, errors, contracts; minimize dependencies; document; use versioning/backward compatibility; apply security, testing, monitoring, access control."],
+["Technical interoperability means…","Systems can physically connect and exchange data using shared network protocols, APIs, or file formats."],
+["Syntactic interoperability means…","Exchanged data follows a shared structure or format — both systems use JSON or XML in the same agreed shape."],
+["Organizational interoperability means…","Different organizations align business processes and governance so their systems can work together."],
+["What is REST?","The most common modern API style, built on HTTP methods (GET, POST, PUT, DELETE)."],
+["What is vendor lock-in?","Proprietary formats/APIs make switching providers difficult."],
+["Benefits of bundling?","Higher perceived value, simplified purchasing/onboarding, cross-promotes underused features, strengthens ecosystem lock-in."],
+["Benefits of unbundling?","Users pay only for what they need, greater flexibility & customization, easier for competitors to target one feature, simplifies pricing transparency."],
+["What is loose coupling?","Services interact through standard interfaces without needing to know each other's internal implementation; changing one doesn't break others as long as its published interface stays the same."],
+["What is discoverability?","Services are published to a registry with a description so other systems can find them dynamically, without hardcoding a connection in advance."],
+["SOA vs microservices — deployment?","SOA: often deployed together as larger units. Microservices: deployed and scaled independently."]];
+const Q=[
+["Which is a non-platform technology example?",["Smartphone","Hammer","Personal Computer","App Store"],1],
+["Which layer sits directly above hardware?",["User Interface","Application Layer","Platform Layer (OS)","Cloud"],2],
+["“DOB” = “Date of Birth” is which interoperability type?",["Technical","Syntactic","Semantic","Organizational"],2],
+["Which protocol is a stricter, XML-based messaging protocol?",["REST","SOAP","JSON","SMTP"],1],
+["In SOA, services are discovered through a…",["Bus","Registry","Plug-in","Library"],1],
+["Which microservices trait differs from SOA?",["Each service usually owns its own database","Uses an ESB","Deployed together","Shared database"],0],
+["A plug-in extends a host platform…",["By modifying its core","Without modifying its core","By replacing the OS","Only via SDK"],1],
+["Abstraction does NOT eliminate decisions about…",["Security, cost, latency, data, reliability","Colors","Fonts","Nothing"],0],
+["Effective platforms provide building blocks that are bundled at which level?",["Hardware level","Application level","OS level","Network level"],1],
+["Which is NOT an SOA principle?",["Loose Coupling","Reusability","Discoverability","Tight Coupling"],3],
+["Which reusability pattern turns API operations into familiar programming-language calls?",["Plug-in","SDK","Registry","ESB"],1],
+["AWS Lambda lets developers run code without…",["Writing functions","Managing servers","Using events","Integrating AWS services"],1],
+["“Each module focuses on related responsibilities” describes…",["Low coupling","High cohesion","Composability","Clear interfaces"],1],
+["“Sign in with Google” interoperates through…",["SOAP","OAuth","HL7","SMTP"],1],
+["Hospitals with different EHR systems share patient data via…",["HL7/FHIR","SMTP/IMAP","OAuth","ESB"],0],
+["Which is a benefit of bundling?",["Users pay only for what they need","Strengthens ecosystem lock-in","Easier for competitors to target one feature","Simplifies pricing transparency"],1],
+["Which is a benefit of unbundling?",["Cross-promotes underused features","Greater flexibility & customization","Simplified onboarding","Ecosystem lock-in"],1],
+["Vendor lock-in means…",["Proprietary formats/APIs make switching providers difficult","Older systems lack modern standards","Services share a database","Changes propagate across components"],0],
+["Which architecture often uses an Enterprise Service Bus (ESB)?",["Microservices","SOA","Both","Neither"],1],
+["Which is NOT one of the four types of interoperability?",["Technical","Syntactic","Semantic","Financial"],3],
+["Firebase Extensions provide…",["Pre-packaged functionality that can be installed and configured","Physical servers","CPU hardware","Operating systems"],0],
+["Which is an application platform?",["Django","Hammer","SMTP","OAuth"],0],
+["Which is an example of the Application Layer?",["Apps in the App Store","CPU","Operating system","Transistors"],0],
+["Which uses HTTP methods (GET, POST, PUT, DELETE)?",["SOAP","REST","XML","ESB"],1],
+["In the plug-in structure, what comes right after the Host?",["Plug-in","Interface/Contract","Extension Point","SDK"],2],
+["Which is a Microsoft bundling example from the lecture?",["Office Suite","Firebase","Laravel","Lambda"],0]];
+const nav=document.getElementById("nav"),m=document.getElementById("m"),NT=T.length;
+const tabs=[...T.map(t=>t.n),"Flashcards","Learn","Test","Match"];let cur=0,tm=null;
+const $=id=>document.getElementById(id),esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const others=(k,n)=>sh(F.map((_,i)=>i).filter(i=>i!=k)).slice(0,n);
+function show(i){cur=i;clearInterval(tm);[...nav.children].forEach((b,j)=>b.classList.toggle("on",j==i));window.scrollTo(0,0);
+if(i<NT)m.innerHTML=T[i].s.map(x=>`<div class="card ${x[2]?"lo":""}"><h3>${esc(x[0])}</h3><ul>${x[1].map(l=>`<li>${esc(l)}</li>`).join("")}</ul></div>`).join("");
+else[fc,learn,test,match][i-NT]()}
+/* FLASHCARDS */
+const S=new Set(),K=new Set();let D=F.map((_,i)=>i),P=0,fl=false,onlyS=false;
+function flip(){fl=!fl;$("c").classList.toggle("flip",fl)}
+function go(d){P=(P+d+D.length)%D.length;fl=false;fc()}
+function fc(){const k=D[P];
+m.innerHTML=`<div class="row" style="justify-content:space-between"><small>${P+1} / ${D.length} · Know ${K.size} · Still learning ${F.length-K.size}</small><span><button class="btn" id="sf">Shuffle</button> <button class="btn ${onlyS?"p":""}" id="os">★ Starred</button></span></div><div class="bar"><i style="width:${(P+1)/D.length*100}%"></i></div>
+<div class="scene"><button class="star ${S.has(k)?"on":""}" id="st">★</button><div class="fcard ${fl?"flip":""}" id="c"><div class="face">${esc(F[k][0])}</div><div class="face back">${esc(F[k][1])}</div></div></div>
+<div class="row"><button class="btn" id="sl">✗ Still learning</button><button class="btn" id="pv">←</button><button class="btn" id="nx">→</button><button class="btn p" id="kn">✓ Know</button></div><p style="text-align:center"><small>Space = flip · ← → = navigate</small></p>`;
+$("c").onclick=flip;$("st").onclick=e=>{S.has(k)?S.delete(k):S.add(k);e.target.classList.toggle("on")};
+$("pv").onclick=()=>go(-1);$("nx").onclick=()=>go(1);
+$("kn").onclick=()=>{K.add(k);go(1)};$("sl").onclick=()=>{K.delete(k);go(1)};
+$("sf").onclick=()=>{D=sh(D);P=0;fl=false;fc()};
+$("os").onclick=()=>{onlyS=!onlyS;D=onlyS&&S.size?[...S]:F.map((_,i)=>i);if(!S.size)onlyS=false;P=0;fl=false;fc()}}
+document.addEventListener("keydown",e=>{if(cur!=NT)return;if(e.code=="Space"){e.preventDefault();flip()}else if(e.key=="ArrowRight")go(1);else if(e.key=="ArrowLeft")go(-1)});
+/* LEARN */
+let L=null;
+function learn(){if(!L)L={q:sh(F.map((_,i)=>i)),d:0,w:0};const tot=F.length;
+if(!L.q.length){m.innerHTML=`<div class="card"><h3>Round complete 🎉</h3><p>You mastered all ${tot} terms. Wrong answers along the way: ${L.w}.</p><button class="btn p" id="rs">Start over</button></div>`;$("rs").onclick=()=>{L=null;learn()};return}
+const k=L.q[0],o=sh([k,...others(k,3)]);
+m.innerHTML=`<small>Mastered ${L.d} / ${tot}</small><div class="bar"><i style="width:${L.d/tot*100}%"></i></div><div class="card"><small>Choose the matching answer</small><p style="font-size:1.15rem"><b>${esc(F[k][0])}</b></p>${o.map(i=>`<button class="btn opt" data-i="${i}">${esc(F[i][1])}</button>`).join("")}<div class="row" id="nb"></div></div>`;
+let done=0;m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{if(done)return;done=1;const ok=+b.dataset.i==k;
+m.querySelectorAll(".opt").forEach(x=>{if(+x.dataset.i==k)x.classList.add("ok")});
+if(ok){L.d++;L.q.shift()}else{b.classList.add("no");L.w++;L.q.push(L.q.shift())}
+const n=document.createElement("button");n.className="btn p";n.textContent="Continue";n.onclick=learn;$("nb").appendChild(n)})}
+/* TEST */
+let TI=[],SEL=[],gr=0;
+function test(){const c=sh(F.map((_,i)=>i));
+const mc=k=>{const ix=sh([k,...others(k,3)]);return{t:"Multiple choice",q:F[k][0],o:ix.map(i=>F[i][1]),a:ix.indexOf(k)}};
+const tf=k=>{const r=Math.random()<.5,d=r?k:others(k,1)[0];return{t:"True / False",q:F[k][0]+"\n→ "+F[d][1],o:["True","False"],a:r?0:1}};
+const qq=sh(Q).slice(0,8).map(x=>{const ix=sh(x[1].map((_,i)=>i));return{t:"Multiple choice",q:x[0],o:ix.map(i=>x[1][i]),a:ix.indexOf(x[2])}});
+TI=[...c.slice(0,8).map(mc),...c.slice(8,16).map(tf),...qq];SEL=[];gr=0;
+m.innerHTML=`<div id="res"></div>`+TI.map((x,i)=>`<div class="card"><small>${i+1} / ${TI.length} · ${x.t}</small><p><b>${esc(x.q)}</b></p>${x.o.map((o,j)=>`<button class="btn opt" data-i="${i}" data-j="${j}">${esc(o)}</button>`).join("")}</div>`).join("")+`<div class="row"><button class="btn p" id="sb">Submit test</button></div>`;
+m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{if(gr)return;const i=+b.dataset.i;SEL[i]=+b.dataset.j;b.parentNode.querySelectorAll(".opt").forEach(x=>x.classList.toggle("sel",x==b))});
+$("sb").onclick=()=>{if(gr)return;gr=1;let s=0;TI.forEach((x,i)=>{const bs=m.querySelectorAll(`.opt[data-i="${i}"]`);if(SEL[i]==x.a)s++;bs.forEach((b,j)=>{b.classList.remove("sel");if(j==x.a)b.classList.add("ok");else if(j==SEL[i])b.classList.add("no")})});
+$("res").innerHTML=`<div class="card"><h3>Score: ${s} / ${TI.length} (${Math.round(s/TI.length*100)}%)</h3><button class="btn p" id="rt">New test</button></div>`;$("rt").onclick=test;$("sb").remove();window.scrollTo(0,0)}}
+/* MATCH */
+function match(){const ks=sh(F.map((_,i)=>i)).slice(0,6),ts=sh(ks.flatMap(k=>[{k,s:F[k][0]},{k,s:F[k][1]}]));let sel=null,left=6;const t0=Date.now();
+m.innerHTML=`<div class="row" style="justify-content:space-between"><small>Match each term with its answer</small><b id="tt">0.0s</b></div><div class="g">${ts.map((x,p)=>`<button class="btn tile" data-p="${p}">${esc(x.s)}</button>`).join("")}</div>`;
+tm=setInterval(()=>{$("tt").textContent=((Date.now()-t0)/1000).toFixed(1)+"s"},100);
+const B=[...m.querySelectorAll(".tile")];
+B.forEach((b,p)=>b.onclick=()=>{if(b.classList.contains("gone"))return;
+if(sel===null){sel=p;b.classList.add("sel");return}
+if(sel==p){sel=null;b.classList.remove("sel");return}
+const a=B[sel];if(ts[sel].k==ts[p].k){a.classList.add("gone");b.classList.add("gone");left--;if(!left){clearInterval(tm);m.innerHTML=`<div class="card"><h3>Finished in ${((Date.now()-t0)/1000).toFixed(1)}s 🎉</h3><button class="btn p" id="pa">Play again</button></div>`;$("pa").onclick=match}}
+else{a.classList.remove("sel");a.classList.add("no");b.classList.add("no");setTimeout(()=>{a.classList.remove("no");b.classList.remove("no")},500)}
+sel=null})}
+tabs.forEach((t,i)=>{const b=document.createElement("button");b.textContent=t;b.onclick=()=>show(i);nav.appendChild(b)});
+show(0);
+</script></body></html>
